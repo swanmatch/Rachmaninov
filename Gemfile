@@ -30,3 +30,32 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+# shirotori_add
+gem 'pry-rails'
+gem 'pry-doc'
+
+gem 'rb-readline', require: false
+
+group :development do
+  # i18n
+  gem 'i18n_generators'
+  # better active record console
+  gem 'hirb'
+  gem 'hirb-unicode'
+  # logêßå‰
+  gem 'quiet_assets'
+end
+
+gem 'puma'
+
+gem 'bootstrap-sass'
+gem 'simple_form'
+
+gem 'sass', '3.3.14'
+
+gem "mime-types", '2.6.2'
+
+gem 'autoprefixer-rails', '6.0.3'
+
