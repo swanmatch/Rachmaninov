@@ -46,6 +46,10 @@ group :development do
   gem 'hirb-unicode'
   # logêßå‰
   gem 'quiet_assets'
+  gem 'better_errors'
+  # migration edit on web
+  gem 'ryakuzu', '0.2.6'
+  gem 'bullet'
 end
 
 gem 'puma'

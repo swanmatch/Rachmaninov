@@ -8,7 +8,28 @@
 </head>
 <body>
 
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container-fluid">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<div class="navbar-collapse collapse navbar-responsive-collapse">
+<%= link_to("Rachaninov", "/", class: "navbar-brand") %>
+</div>
+</div>
+</div>
+
+<div class="container-fluid">
+
 <%= yield %>
+
+<footer>
+<p class="text-right text-muted"> Copyright &copy; Advanced Information Design</p>
+</footer>
+
+</div>
 
 </body>
 </html>
