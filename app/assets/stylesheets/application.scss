@@ -15,6 +15,7 @@
  * require_tree .
  *= require_self
  */
+
 @import "bootstrap";
 
 $offcanvas-media: 2000px;
@@ -31,51 +32,56 @@ $offcanvas-animation-time: 0s;
        image-url("bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg")
 }
 
-html, body {
-  /*padding-top: 70px;*/
+html, body, .container-fluid {
   height: 100%;
 }
 
-.container-fluid {
-  height: 100%;
+$navbar-size: 50px;
+
+@media screen and (max-width: 767px) {
+  body {
+    padding-top: 56px;
+  }
 }
 
+body {
+  padding-top: $navbar-size;
+}
 
-.navbar-header{
+.navbar-header { 
   text-align: center;
 }
 
-.navbar-brand{
+.navbar-brand {
   display: inline-block;
-  float: none;
 }
 
-.navbar-toggle{
-  float: none;
+.navbar-toggle {
   color: #FFF;
 }
 
 .row-offcanvas-left
 .sidebar-offcanvas {
-  left: -30%;
-}
-
-.row-offcanvas-left.active {
-  left: 30%;
-}
-
-.sidebar-offcanvas {
-  height: 100%;
-  margin-left: -30px;
-  margin-top: -20px;
-}
-
-.row-offcanvas-left
-.sidebar-offcanvas .offCanvasTrick{
   display: none;
 }
 
-.row-offcanvas-left.active .offCanvasTrick{
+.row-offcanvas-left.active {
+  display: block;
+}
+
+.sidebar-offcanvas {
+  height: 100% !important;
+  margin-left: -30px;
+  display: none;
+}
+
+.row-offcanvas-left
+.sidebar-offcanvas
+.offCanvasTrick {
+  display: none;
+}
+
+.row-offcanvas-left.active .offCanvasTrick {
   display: block;
   height: 100%;
   position: inherit;
@@ -83,22 +89,24 @@ html, body {
   left: 100%;
 }
 
-.row-offcanvas-left #sidebar{
+.row-offcanvas-left #sidebar {
   text-align: right;
 }
 
-#sidebar a.list-group-item{
+#sidebar a.list-group-item {
   color: #9D9D9D;
   background-color: transparent;
   border-color: #333;
 }
 
-#sidebar div.nav-container{
+#sidebar div.nav-container {
   background-color: #222;
   height: 100%;
 }
 
-#sidebar a.list-group-item.active, #sidebar a.list-group-item:hover, #sidebar a.list-group-item:focus{
+#sidebar a.list-group-item.active,
+#sidebar a.list-group-item:hover,
+#sidebar a.list-group-item:focus {
   color: #FFF;
 }
 
@@ -106,5 +114,13 @@ html, body {
   background-color: #080808;
 }
 
+#sidebar h4 {
+  margin: 0px;
+  padding: 10px;
+  color: #9D9D9D;
+}
 
+.navbar-toggle-always {
+  display: block;
+}
 
