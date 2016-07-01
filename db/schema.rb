@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160629073421) do
+ActiveRecord::Schema.define(version: 20160701025803) do
 
   create_table "composers", force: :cascade do |t|
     t.string   "name",         limit: 255
@@ -24,4 +24,22 @@ ActiveRecord::Schema.define(version: 20160629073421) do
     t.datetime "updated_at",                           null: false
   end
 
+  create_table "songs", force: :cascade do |t|
+    t.string   "title",        limit: 255
+    t.integer  "composer_id",  limit: 4
+    t.integer  "tempo",        limit: 4
+    t.integer  "key",          limit: 4
+    t.boolean  "scale"
+    t.integer  "lock_version", limit: 4,   default: 0, null: false
+    t.integer  "created_by",   limit: 4
+    t.integer  "updated_by",   limit: 4
+    t.integer  "deleted_by",   limit: 4
+    t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "songs", ["composer_id"], name: "index_songs_on_composer_id", using: :btree
+
+  add_foreign_key "songs", "composers"
 end

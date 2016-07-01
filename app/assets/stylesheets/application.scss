@@ -14,13 +14,12 @@
  * require select2-bootstrap
  * require_tree .
  *= require_self
+ *= require bootstrap-material-design
  */
-
-@import "bootstrap";
 
 $offcanvas-media: 2000px;
 $offcanvas-animation-time: 0s;
-/*@import "bootstrap.offcanvas";*/
+
 @import "bootstrap";
 
 @font-face {
@@ -36,16 +35,16 @@ html, body, .container-fluid {
   height: 100%;
 }
 
-$navbar-size: 50px;
-
-@media screen and (max-width: 767px) {
-  body {
-    padding-top: 56px;
-  }
-}
+$navbar-size: 60px;
 
 body {
   padding-top: $navbar-size;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    padding-top: 52px;
+  }
 }
 
 .navbar-header { 

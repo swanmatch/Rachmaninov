@@ -52,6 +52,8 @@ GEM
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
+    bootstrap-material-design (0.2.2)
+      bootstrap-sass (~> 3.0)
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -211,6 +213,7 @@ DEPENDENCIES
   activerecord-jdbcmysql-adapter
   autoprefixer-rails (= 6.0.3)
   better_errors
+  bootstrap-material-design
   bootstrap-sass
   bullet
   coffee-rails (~> 4.1.0)

@@ -15,5 +15,6 @@
 // require turbolinks
 //= require_tree .
 //= require bootstrap
+//= require bootstrap-material-design
 // require bootstrap.offcanvas
 //= require offcanvas

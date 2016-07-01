@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :songs
+  resources :songs
   resources :composers
   resources :composers
   resources :composers
@@ -58,6 +60,7 @@ Rails.application.routes.draw do
   #   end
 
 #  Ryakuzu::Engine.routes.draw do
+  resources :songs
   resources :composers
 #    resources :tables, only: [:create]
 #

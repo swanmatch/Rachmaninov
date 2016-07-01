@@ -55,6 +55,7 @@ end
 gem 'puma'
 
 gem 'bootstrap-sass'
+gem 'bootstrap-material-design'
 gem 'simple_form'
 
 gem 'sass', '3.3.14'
