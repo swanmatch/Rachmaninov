@@ -18,3 +18,8 @@
 //= require bootstrap-material-design
 // require bootstrap.offcanvas
 //= require offcanvas
+
+
+$(function(){
+  $.material.init();
+});

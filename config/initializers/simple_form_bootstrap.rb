@@ -95,13 +95,30 @@ SimpleForm.setup do |config|
     end
   end
 
-  config.wrappers :horizontal_radio_and_checkboxes, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
+  config.wrappers :horizontal_radio, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
+    b.use :html5
+    b.optional :readonly
+
+    b.use :label, class: 'col-sm-3 control-label radio'
+
+    b.wrapper tag: 'div', class: 'col-sm-9 radio radio-primary' do |ba|
+      ba.use :input
+      ba.wrapper tag: 'span', class: "circle" do |bar|
+      end
+      ba.wrapper tag: 'span', class: "circle" do |bar|
+      end
+      ba.use :error, wrap_with: { tag: 'span', class: 'help-block' }
+      ba.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
+    end
+  end
+
+  config.wrappers :horizontal_checkbox, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
     b.use :html5
     b.optional :readonly
 
     b.use :label, class: 'col-sm-3 control-label'
 
-    b.wrapper tag: 'div', class: 'col-sm-9' do |ba|
+    b.wrapper tag: 'div', class: 'col-sm-9 radio' do |ba|
       ba.use :input
       ba.use :error, wrap_with: { tag: 'span', class: 'help-block' }
       ba.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
@@ -138,10 +155,10 @@ SimpleForm.setup do |config|
   # buttons and other elements.
   config.default_wrapper = :horizontal_form
   config.wrapper_mappings = {
-    check_boxes: :vertical_radio_and_checkboxes,
-    radio_buttons: :vertical_radio_and_checkboxes,
-    file: :vertical_file_input,
-    boolean: :vertical_boolean,
+    check_boxes: :horizontal_checkbox,
+    radio_buttons: :horizontal_radio,
+    file: :horizontal_file_input,
+    boolean: :horizontal_boolean,
     datetime: :multi_select,
     date: :multi_select,
     time: :multi_select

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :chords
+  resources :chords
+  resources :chords
   resources :songs
   resources :songs
   resources :composers

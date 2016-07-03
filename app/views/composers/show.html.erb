@@ -5,25 +5,5 @@
   <%= @composer.name %>
 </p>
 
-<p>
-  <strong>Created by:</strong>
-  <%= @composer.created_by %>
-</p>
-
-<p>
-  <strong>Updated by:</strong>
-  <%= @composer.updated_by %>
-</p>
-
-<p>
-  <strong>Deleted by:</strong>
-  <%= @composer.deleted_by %>
-</p>
-
-<p>
-  <strong>Deleted at:</strong>
-  <%= @composer.deleted_at %>
-</p>
-
-<%= link_to 'Edit', edit_composer_path(@composer) %> |
-<%= link_to 'Back', composers_path %>
+<%= link_to 'Back', composers_path, class: "btn btn-default" %> |
+<%= link_to 'Edit', edit_composer_path(@composer), class: "btn btn-primary" %>

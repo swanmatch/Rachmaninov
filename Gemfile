@@ -4,7 +4,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use jdbcmysql as the database for Active Record
-gem 'activerecord-jdbcmysql-adapter'
+gem 'activerecord-jdbcmysql-adapter', platform: :jruby
+gem 'activerecord-mysql-adapter', platform: :ruby
+gem 'mysql2', platform: :ruby
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -26,7 +28,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'libv8', :platforms => :ruby
+gem 'execjs', :platforms => :ruby
+gem 'therubyracer', :platforms => :ruby
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

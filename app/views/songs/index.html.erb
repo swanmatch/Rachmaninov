@@ -2,7 +2,7 @@
 
 <h1>Listing Songs</h1>
 
-<table>
+<table class="table table-striped able-bordered table-hover">
   <thead>
     <tr>
       <th>Title</th>
@@ -18,13 +18,13 @@
     <% @songs.each do |song| %>
       <tr>
         <td><%= song.title %></td>
-        <td><%= song.composer %></td>
+        <td><%= song.composer.name %></td>
         <td><%= song.tempo %></td>
         <td><%= song.key %></td>
         <td><%= song.scale %></td>
-        <td><%= link_to 'Show', song %></td>
-        <td><%= link_to 'Edit', edit_song_path(song) %></td>
-        <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', song, class: "btn btn-primary", class: "btn btn-success" %></td>
+        <td><%= link_to 'Edit', edit_song_path(song), class: "btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Song', new_song_path %>
+<%= link_to 'New Song', new_song_path, class: "btn btn-info" %>

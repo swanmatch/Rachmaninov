@@ -2,14 +2,10 @@
 
 <h1>Listing Composers</h1>
 
-<table>
+<table class="table table-striped able-bordered table-hover">
   <thead>
     <tr>
       <th>Name</th>
-      <th>Created by</th>
-      <th>Updated by</th>
-      <th>Deleted by</th>
-      <th>Deleted at</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,13 +14,9 @@
     <% @composers.each do |composer| %>
       <tr>
         <td><%= composer.name %></td>
-        <td><%= composer.created_by %></td>
-        <td><%= composer.updated_by %></td>
-        <td><%= composer.deleted_by %></td>
-        <td><%= composer.deleted_at %></td>
-        <td><%= link_to 'Show', composer %></td>
-        <td><%= link_to 'Edit', edit_composer_path(composer) %></td>
-        <td><%= link_to 'Destroy', composer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', composer, class: "btn btn-success" %></td>
+        <td><%= link_to 'Edit', edit_composer_path(composer), class: "btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', composer, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Composer', new_composer_path %>
+<%= link_to 'New Composer', new_composer_path, class: "btn btn-info" %>
