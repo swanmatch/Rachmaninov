@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
+  resources :codes
+  resources :codes
   resources :chords
   resources :chords
   resources :chords
@@ -63,6 +67,7 @@ Rails.application.routes.draw do
   #   end
 
 #  Ryakuzu::Engine.routes.draw do
+  resources :codes
   resources :songs
   resources :composers
 #    resources :tables, only: [:create]
@@ -78,7 +83,7 @@ Rails.application.routes.draw do
 #    post 'new_column',      to: 'tables#new_column',      as: :new_column
 #    post 'save_csv',        to: 'tables#save_csv',        as: :save_csv
 #
-#    root 'main#index'
+  root 'welcome#index'
 #  end
   mount Ryakuzu::Engine => '/ryakuzu'
 end

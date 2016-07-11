@@ -139,3 +139,7 @@ div.radio_buttons {
 .form-actions {
   text-align: center;
 }
+
+.table > tbody > tr > th, td {
+  vertical-align: middle !important;
+}

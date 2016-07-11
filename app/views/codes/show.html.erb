@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<div class="well">
+    <p>
+    <strong>Name:</strong>
+    <%= @code.name %>
+  </p>
+
+  </div>
+
+<div class="text-center">
+  <%= link_to 'Back', codes_path, class: 'btn btn-default' %> |
+  <%= link_to 'Edit', edit_code_path(@code), class: 'btn btn-primary' %>
+</div>

@@ -1,0 +1,15 @@
+<h1>Welcome</h1>
+<%
+require 'action_dispatch/routing/inspector'
+all_routes = Rails.application.routes.routes
+inspector = ActionDispatch::Routing::RoutesInspector.new(all_routes)
+#(all_routes).format(ActionDispatch::Routing::ConsoleFormatter.new).split(/\n/)
+#all_routes = Rails.application.routes.routes
+#inspector = Rails::Application::RouteInspector.new
+inspector.instance_values["routes"].reject{|r| r.parts.size != 1 || r.name.blank? || r.name.include?("new") || r.name.include?("rails") }.map(&:name).compact.each do |path|
+%>
+
+<p>
+<%= link_to path, self.try("#{path}_path") %>
+</p>
+<%- end -%>
