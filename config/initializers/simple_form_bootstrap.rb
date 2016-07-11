@@ -1,5 +1,6 @@
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
+  config.form_class = 'well'
   config.error_notification_class = 'alert alert-danger'
   config.button_class = 'btn btn-default'
   config.boolean_label_class = nil
@@ -51,20 +52,23 @@ SimpleForm.setup do |config|
     b.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
   end
 
-  config.wrappers :horizontal_form, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
+  config.wrappers :horizontal_form, tag: 'div', class: 'form-group label-floating', error_class: 'has-error' do |b|
     b.use :html5
     b.use :placeholder
     b.optional :maxlength
     b.optional :pattern
     b.optional :min_max
     b.optional :readonly
-    b.use :label, class: 'col-sm-3 control-label'
+    b.use :label, class: 'control-label'
 
-    b.wrapper tag: 'div', class: 'col-sm-9' do |ba|
-      ba.use :input, class: 'form-control'
-      ba.use :error, wrap_with: { tag: 'span', class: 'help-block' }
-      ba.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
-    end
+#    b.wrapper tag: 'div' do |ba|
+#      ba.use :input, class: 'form-control floating-label', placeholder: "b.use(:placeholder)"
+#      ba.use :error, wrap_with: { tag: 'span', class: 'help-block' }
+#      ba.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
+#    end
+    b.use :input, class: 'form-control'
+    b.use :error, wrap_with: { tag: 'span', class: 'help-block' }
+    b.use :hint,  wrap_with: { tag: 'span', class: 'help-block' }
   end
 
   config.wrappers :horizontal_file_input, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
@@ -99,14 +103,10 @@ SimpleForm.setup do |config|
     b.use :html5
     b.optional :readonly
 
-    b.use :label, class: 'col-sm-3 control-label radio'
+    b.use :label, class: 'col-sm-3 control-label'
 
-    b.wrapper tag: 'div', class: 'col-sm-9 radio radio-primary' do |ba|
+    b.wrapper tag: 'div', class: 'col-sm-9' do |ba|
       ba.use :input
-      ba.wrapper tag: 'span', class: "circle" do |bar|
-      end
-      ba.wrapper tag: 'span', class: "circle" do |bar|
-      end
       ba.use :error, wrap_with: { tag: 'span', class: 'help-block' }
       ba.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
     end

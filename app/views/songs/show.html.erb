@@ -1,29 +1,35 @@
+<h1>Show Song</h1>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @song.title %>
-</p>
+<div class="well">
+  <p>
+    <strong>Title:</strong>
+    <%= @song.title %>
+  </p>
 
-<p>
-  <strong>Composer:</strong>
-  <%= @song.composer %>
-</p>
+  <p>
+    <strong>Composer:</strong>
+    <%= @song.composer.name %>
+  </p>
 
-<p>
-  <strong>Tempo:</strong>
-  <%= @song.tempo %>
-</p>
+  <p>
+    <strong>Tempo:</strong>
+    <%= @song.tempo %>
+  </p>
 
-<p>
-  <strong>Key:</strong>
-  <%= @song.key %>
-</p>
+  <p>
+    <strong>Key:</strong>
+    <%= @song.key %>
+  </p>
 
-<p>
-  <strong>Scale:</strong>
-  <%= @song.scale %>
-</p>
+  <p>
+    <strong>Scale:</strong>
+    <%= @song.scale %>
+  </p>
+</div>
 
-<%= link_to 'Back', songs_path, class: "btn btn-default" %> |
-<%= link_to 'Edit', edit_song_path(@song), class: "btn btn-primary" %>
+<div class="text-center">
+  <%= link_to 'Back', songs_path, class: "btn btn-default" %> |
+  <%= link_to 'Edit', edit_song_path(@song), class: "btn btn-primary" %>
+</div>
+

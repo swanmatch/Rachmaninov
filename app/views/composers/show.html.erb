@@ -1,9 +1,13 @@
+<h1>Show Composer</h1>
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="well">
   <strong>Name:</strong>
   <%= @composer.name %>
 </p>
 
-<%= link_to 'Back', composers_path, class: "btn btn-default" %> |
-<%= link_to 'Edit', edit_composer_path(@composer), class: "btn btn-primary" %>
+<div class="text-center">
+  <%= link_to 'Back', composers_path, class: "btn btn-default" %> |
+  <%= link_to 'Edit', edit_composer_path(@composer), class: "btn btn-primary" %>
+</div>
+

@@ -14,7 +14,8 @@
  * require select2-bootstrap
  * require_tree .
  *= require_self
- *= require bootstrap-material-design
+ * require bootstrap-material-design
+ *= require material/bootstrap-material-design
  */
 
 $offcanvas-media: 2000px;
@@ -123,3 +124,18 @@ body {
   display: block;
 }
 
+div.radio_buttons {
+  label.radio_buttons {
+    padding-left: 0;
+  }
+  span.radio {
+    display: inline-block;
+    label {
+      padding-right: 10px;
+    }
+  }
+}
+
+.form-actions {
+  text-align: center;
+}
