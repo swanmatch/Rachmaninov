@@ -4782,3 +4782,420 @@ Processing by CodesController#index as HTML
   [1m[36mCode Load (1.0ms)[0m  [1mSELECT `codes`.* FROM `codes`[0m
   Rendered codes/index.html.erb within layouts/application (8.0ms)
 Completed 200 OK in 91ms (Views: 88.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/chords" for 127.0.0.1 at 2016-07-11 16:40:25 +0900
+
+ActionController::RoutingError - uninitialized constant ChordsController:
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:261:in `constantize'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:22:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma-3.4.0 (java) lib/puma/configuration.rb:224:in `call'
+  puma-3.4.0 (java) lib/puma/server.rb:569:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:567:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:406:in `process_client'
+  puma-3.4.0 (java) lib/puma/server.rb:271:in `run'
+  puma-3.4.0 (java) lib/puma/thread_pool.rb:114:in `call'
+  puma-3.4.0 (java) lib/puma/thread_pool.rb:114:in `spawn_thread'
+
+
+
+Started POST "/__better_errors/11740/variables" for 127.0.0.1 at 2016-07-11 16:40:25 +0900
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead. (called from (root) at C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/config/initializers/simple_form_bootstrap.rb:3)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead. (called from (root) at C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/config/initializers/simple_form_bootstrap.rb:3)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-11 16:42:57 +0900
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+ActiveRecord::PendingMigrationError - 
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+:
+  activerecord (4.2.6) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.6) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:22:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma-3.4.0 (java) lib/puma/configuration.rb:224:in `call'
+  puma-3.4.0 (java) lib/puma/server.rb:569:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:567:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:406:in `process_client'
+  puma-3.4.0 (java) lib/puma/server.rb:271:in `run'
+  org/jruby/RubyProc.java:281:in `call'
+  puma-3.4.0 (java) lib/puma/thread_pool.rb:114:in `spawn_thread'
+
+
+
+Started POST "/__better_errors/12126/variables" for 127.0.0.1 at 2016-07-11 16:42:58 +0900
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead. (called from (root) at C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/config/initializers/simple_form_bootstrap.rb:3)
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateChords (20160711074251)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from change at C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/db/migrate/20160711074251_create_chords.rb:17)
+  [1m[35m (75.0ms)[0m  CREATE TABLE `chords` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `lock_version` int(11) DEFAULT 0 NOT NULL, `created_by` int(11), `updated_by` int(11), `deleted_by` int(11), `deleted_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20160711074251')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (1.0ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (1.0ms)[0m  SELECT fk.referenced_table_name as 'to_table' ,fk.referenced_column_name as 'primary_key' ,fk.column_name as 'column' ,fk.constraint_name as 'name' FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name is not null AND fk.table_schema = 'rachmaninov_development' AND fk.table_name = 'chords'
+  [1m[36m (0.0ms)[0m  [1mSHOW CREATE TABLE `chords`[0m
+  [1m[35m (1.0ms)[0m  SELECT DATABASE() as db
+  [1m[36m (1.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table' ,fk.referenced_column_name as 'primary_key' ,fk.column_name as 'column' ,fk.constraint_name as 'name' FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name is not null AND fk.table_schema = 'rachmaninov_development' AND fk.table_name = 'codes'[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `codes`
+  [1m[36m (1.0ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (1.0ms)[0m  SELECT fk.referenced_table_name as 'to_table' ,fk.referenced_column_name as 'primary_key' ,fk.column_name as 'column' ,fk.constraint_name as 'name' FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name is not null AND fk.table_schema = 'rachmaninov_development' AND fk.table_name = 'composers'
+  [1m[36m (1.0ms)[0m  [1mSHOW CREATE TABLE `composers`[0m
+  [1m[35m (1.0ms)[0m  SELECT DATABASE() as db
+  [1m[36m (1.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table' ,fk.referenced_column_name as 'primary_key' ,fk.column_name as 'column' ,fk.constraint_name as 'name' FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name is not null AND fk.table_schema = 'rachmaninov_development' AND fk.table_name = 'songs'[0m
+  [1m[35m (8.0ms)[0m  SHOW CREATE TABLE `songs`
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-11 16:43:22 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (14.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 103ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/codes" for 127.0.0.1 at 2016-07-11 16:43:28 +0900
+
+ActionController::RoutingError - uninitialized constant CodesController:
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:261:in `constantize'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.6) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:22:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma-3.4.0 (java) lib/puma/configuration.rb:224:in `call'
+  puma-3.4.0 (java) lib/puma/server.rb:569:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:567:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:406:in `process_client'
+  puma-3.4.0 (java) lib/puma/server.rb:271:in `run'
+  puma-3.4.0 (java) lib/puma/thread_pool.rb:114:in `call'
+  puma-3.4.0 (java) lib/puma/thread_pool.rb:114:in `spawn_thread'
+
+
+
+Started POST "/__better_errors/12690/variables" for 127.0.0.1 at 2016-07-11 16:43:28 +0900
+
+
+Started GET "/chords" for 127.0.0.1 at 2016-07-11 16:43:30 +0900
+Processing by ChordsController#index as HTML
+  [1m[35mChord Load (0.0ms)[0m  SELECT `chords`.* FROM `chords`
+  Rendered chords/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 141ms (Views: 115.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-11 16:44:05 +0900
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 117ms (Views: 115.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chords" for 127.0.0.1 at 2016-07-11 16:44:09 +0900
+Processing by ChordsController#index as HTML
+  [1m[36mChord Load (1.0ms)[0m  [1mSELECT `chords`.* FROM `chords`[0m
+  Rendered chords/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 105ms (Views: 87.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/chords/new" for 127.0.0.1 at 2016-07-11 16:44:11 +0900
+Processing by ChordsController#new as HTML
+  Rendered chords/_form.html.erb (23.0ms)
+  Rendered chords/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 143ms (Views: 109.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/chords" for 127.0.0.1 at 2016-07-11 16:44:14 +0900
+Processing by ChordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ISBDaAkqaClhg0xQOGTFfbM72WNY5c6iDSV7pGAPVGG0srNHlZAHBQdCrnVPiftnrvQHYTgzh2/DBFyG3eWvPw==", "chord"=>{"name"=>"C"}, "commit"=>"Create Chord"}
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `chords` (`name`, `created_at`, `updated_at`, `lock_version`) VALUES ('C', '2016-07-11 07:44:14', '2016-07-11 07:44:14', 0)
+Redirected to http://localhost:3000/chords/1
+Completed 302 Found in 79ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/chords/1" for 127.0.0.1 at 2016-07-11 16:44:14 +0900
+Processing by ChordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChord Load (1.0ms)[0m  [1mSELECT  `chords`.* FROM `chords` WHERE `chords`.`id` = 1 LIMIT 1[0m
+  Rendered chords/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 86ms (Views: 80.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/chords" for 127.0.0.1 at 2016-07-11 16:44:17 +0900
+Processing by ChordsController#index as HTML
+  [1m[35mChord Load (3.0ms)[0m  SELECT `chords`.* FROM `chords`
+  Rendered chords/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 89ms (Views: 82.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/chords/new" for 127.0.0.1 at 2016-07-11 16:44:20 +0900
+Processing by ChordsController#new as HTML
+  Rendered chords/_form.html.erb (19.0ms)
+  Rendered chords/new.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 117ms (Views: 114.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/chords" for 127.0.0.1 at 2016-07-11 16:44:24 +0900
+Processing by ChordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DcAu6+ybvRoYqlu2ngr43jau4WUZuScRF6i/tHjIWFCYUt7EcCHSNn5ruZPp58bEK2E/Z3lvbtzZiZiWxSKjDg==", "chord"=>{"name"=>"Cm"}, "commit"=>"Create Chord"}
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `chords` (`name`, `created_at`, `updated_at`, `lock_version`) VALUES ('Cm', '2016-07-11 07:44:24', '2016-07-11 07:44:24', 0)[0m
+Redirected to http://localhost:3000/chords/2
+Completed 302 Found in 42ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/chords/2" for 127.0.0.1 at 2016-07-11 16:44:24 +0900
+Processing by ChordsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChord Load (1.0ms)[0m  SELECT  `chords`.* FROM `chords` WHERE `chords`.`id` = 2 LIMIT 1
+  Rendered chords/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 120ms (Views: 116.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/chords" for 127.0.0.1 at 2016-07-11 16:44:24 +0900
+Processing by ChordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DcAu6+ybvRoYqlu2ngr43jau4WUZuScRF6i/tHjIWFCYUt7EcCHSNn5ruZPp58bEK2E/Z3lvbtzZiZiWxSKjDg==", "chord"=>{"name"=>"Cm"}, "commit"=>"Create Chord"}
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `chords` (`name`, `created_at`, `updated_at`, `lock_version`) VALUES ('Cm', '2016-07-11 07:44:24', '2016-07-11 07:44:24', 0)[0m
+Redirected to http://localhost:3000/chords/3
+Completed 302 Found in 35ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/chords/3" for 127.0.0.1 at 2016-07-11 16:44:24 +0900
+Processing by ChordsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mChord Load (1.0ms)[0m  SELECT  `chords`.* FROM `chords` WHERE `chords`.`id` = 3 LIMIT 1
+  Rendered chords/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 85ms (Views: 80.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/chords" for 127.0.0.1 at 2016-07-11 16:44:26 +0900
+Processing by ChordsController#index as HTML
+  [1m[36mChord Load (1.0ms)[0m  [1mSELECT `chords`.* FROM `chords`[0m
+  Rendered chords/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 96ms (Views: 92.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/chords/3" for 127.0.0.1 at 2016-07-11 16:44:30 +0900
+Processing by ChordsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FJRKP6NT1WU+8yb4uKPuD0gnC6UQVV4sM6jpk5Pb7a2BBroQP+m6SVgyxN3PTtAVVejVp3CDF+H9ic6xLjEW8w==", "id"=>"3"}
+  [1m[35mChord Load (1.0ms)[0m  SELECT  `chords`.* FROM `chords` WHERE `chords`.`id` = 3 LIMIT 1
+  [1m[36mSQL (63.0ms)[0m  [1mDELETE FROM `chords` WHERE `chords`.`id` = 3 AND `chords`.`lock_version` = 0[0m
+Redirected to http://localhost:3000/chords
+Completed 302 Found in 106ms (ActiveRecord: 64.0ms)
+
+
+Started GET "/chords" for 127.0.0.1 at 2016-07-11 16:44:30 +0900
+Processing by ChordsController#index as HTML
+  [1m[35mChord Load (1.0ms)[0m  SELECT `chords`.* FROM `chords`
+  Rendered chords/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 139ms (Views: 131.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-11 16:44:34 +0900
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 87ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chords" for 127.0.0.1 at 2016-07-11 16:44:40 +0900
+Processing by ChordsController#index as HTML
+  [1m[36mChord Load (1.0ms)[0m  [1mSELECT `chords`.* FROM `chords`[0m
+  Rendered chords/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 118ms (Views: 110.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-11 16:44:50 +0900
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 124ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-11 17:01:03 +0900
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 7050ms (Views: 7044.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-11 17:01:20 +0900
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3472ms (Views: 3470.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-11 17:01:55 +0900
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2720ms (Views: 2718.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-11 17:02:30 +0900
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2761ms (Views: 2756.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2016-07-11 17:10:39 +0900
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:22:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma-3.4.0 (java) lib/puma/configuration.rb:224:in `call'
+  puma-3.4.0 (java) lib/puma/server.rb:569:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:567:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:406:in `process_client'
+  puma-3.4.0 (java) lib/puma/server.rb:401:in `process_client'
+  puma-3.4.0 (java) lib/puma/server.rb:271:in `run'
+  org/jruby/RubyProc.java:281:in `call'
+  puma-3.4.0 (java) lib/puma/thread_pool.rb:114:in `spawn_thread'
+
+
+  Rendered C:/jruby-1.7.24/lib/ruby/gems/shared/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/jruby-1.7.24/lib/ruby/gems/shared/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered C:/jruby-1.7.24/lib/ruby/gems/shared/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered C:/jruby-1.7.24/lib/ruby/gems/shared/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.0ms)
+  Rendered C:/jruby-1.7.24/lib/ruby/gems/shared/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.0ms)
+  Rendered C:/jruby-1.7.24/lib/ruby/gems/shared/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.0ms)

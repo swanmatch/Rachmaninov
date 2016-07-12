@@ -1,6 +1,6 @@
-class CreateCodes < ActiveRecord::Migration
+class CreateChords < ActiveRecord::Migration
   def change
-    create_table :codes do |t|
+    create_table :chords do |t|
 
 
       t.string :name

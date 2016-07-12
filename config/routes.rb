@@ -1,16 +1,6 @@
 Rails.application.routes.draw do
+  resources :chords
   get 'welcome/index'
-
-  resources :codes
-  resources :codes
-  resources :chords
-  resources :chords
-  resources :chords
-  resources :songs
-  resources :songs
-  resources :composers
-  resources :composers
-  resources :composers
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -67,7 +57,7 @@ Rails.application.routes.draw do
   #   end
 
 #  Ryakuzu::Engine.routes.draw do
-  resources :codes
+  resources :chords
   resources :songs
   resources :composers
 #    resources :tables, only: [:create]

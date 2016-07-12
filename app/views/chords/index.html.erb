@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Chords</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chords.each do |chord| %>
+      <tr>
+        <td><%= chord.name %></td>
+        <td class="text-center"><%= link_to 'Show', chord, class: 'btn btn-success' %></td>
+        <td class="text-center"><%= link_to 'Edit', edit_chord_path(chord), class: 'btn btn-primary' %></td>
+        <td class="text-center"><%= link_to 'Destroy', chord, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div class="text-center">
+  <%= link_to 'New Chord', new_chord_path, class: "btn btn-info" %>
+</div>
