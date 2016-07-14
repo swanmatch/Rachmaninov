@@ -22,5 +22,11 @@
 
 
 $(function(){
+  // material design initialize
   $.material.init();
+
+  // sidebar default open when window size large
+  if($(window).innerWidth() >= 1200){
+    $('#sidebar-toggle').click();
+  }
 });

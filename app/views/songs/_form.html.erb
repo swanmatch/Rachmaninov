@@ -1,24 +1,28 @@
 <%= simple_form_for(@song, html: { class: "well"} ) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <div class="row">
+  <div class="row">
+    <%#*<div class="row">%>
       <div class="col-sm-6">
         <%= f.input :title %>
       </div>
       <div class="col-sm-6">
         <%= f.association :composer %>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
+    <%#*</div>%>
+  </div>
+  <div class="row">
+    <%#*<div class="row">%>
+      <div class="col-sm-4">
         <%= f.input :tempo %>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <%= f.input :key, include_blank: false, collection: Song.keys.keys, as: :select %>
       </div>
-    </div>
-    <%= f.input :scale, collection: Song.scales.keys, as: :radio_buttons %>
+      <div class="col-sm-4">
+        <%= f.input :scale, collection: Song.scales.keys, as: :radio_buttons %>
+      </div>
+    <%#*</div>%>
   </div>
 
   <div class="form-actions">

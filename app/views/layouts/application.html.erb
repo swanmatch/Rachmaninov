@@ -12,7 +12,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
 
-      <button type="button" class="navbar-toggle navbar-toggle-always collapsed pull-left" data-toggle="offcanvas" data-target="#sidebar" aria-expanded="false" aria-controls="navbar">
+      <button type="button" class="navbar-toggle navbar-toggle-always collapsed pull-left" data-toggle="offcanvas" data-target="#sidebar" aria-expanded="false" aria-controls="navbar" id="sidebar-toggle">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -30,9 +30,9 @@
 
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav hidden-xs">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><%= link_to 'songs', songs_path %></li>
+        <li><%= link_to 'composers', composers_path %></li>
+        <li><%= link_to 'chords', chords_path %></li>
       </ul>
       <form class="navbar-form navbar-right">
         <input class="form-control" placeholder="Search..." type="text">
@@ -46,28 +46,29 @@
 <div class="col-xs-4 col-sm-3 sidebar-offcanvas row-offcanvas-left row-offcanvas" id="sidebar">
   <div class="nav-container">
     <h4 class="text-center">Global Navigation</h4>
-    <div class="list-group">
-      <a href="#" class="list-group-item active">Home</a>
-      <a href="#" class="list-group-item">About</a>
-      <a href="#" class="list-group-item">Contact</a>
-    </div>
+    <ul class="list-group">
+      <li><%= link_to 'songs', songs_path %></li>
+      <li><%= link_to 'composers', composers_path %></li>
+      <li><%= link_to 'chords', chords_path %></li>
+    </ul>
+ <% if @local_navigation -%>
     <h4 class="text-center">Local Navigation</h4>
     <div class="list-group">
-      <a href="#" class="list-group-item active">Link</a>
-      <a href="#" class="list-group-item">Link</a>
-      <a href="#" class="list-group-item">Link</a>
-      <a href="#" class="list-group-item">Link</a>
+      <%- @local_navigation.each do |id, text| %>
+      <a href="#<%= id %>" class="list-group-item"><%= text %></a>
+      <%- end -%>
     </div>
+<% end -%>
   </div>
   <!--<div class="offCanvasTrick" data-toggle="offcanvas"></div>-->
 </div>
 
 <div class="inbody">
 <%= yield %>
-<div>
+</div>
 
 <footer>
-<p class="text-right text-muted"> Copyright &copy; swan_match</p>
+<p class="text-right text-muted">Copyright &copy; swan_match</p>
 </footer>
 
 </div>
