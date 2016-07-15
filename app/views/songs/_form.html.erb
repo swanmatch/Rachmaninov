@@ -1,27 +1,35 @@
+<%- only_show ||= false -%>
 <%= simple_form_for(@song) do |f| %>
   <%= f.error_notification %>
 
   <div class="row">
     <div class="col-sm-6">
-      <%= f.input :title %>
+      <%= f.input :title, disabled: only_show %>
     </div>
     <div class="col-sm-6">
-      <%= f.association :composer %>
+      <%= f.association :composer, disabled: only_show %>
     </div>
   </div>
   <div class="row">
     <div class="col-sm-4">
-      <%= f.input :tempo %>
+      <%= f.input :tempo, disabled: only_show  %>
     </div>
     <div class="col-sm-4">
-      <%= f.input :key, include_blank: false, collection: Song.keys.keys, as: :select %>
+      <%= f.input :key, include_blank: false, collection: Song.keys.keys, as: :select, disabled: only_show %>
     </div>
     <div class="col-sm-4">
-      <%= f.input :scale, collection: Song.scales.keys, as: :radio_buttons %>
+      <%= f.input :scale, collection: Song.scales.keys, as: :radio_buttons, disabled: only_show %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <%= f.input :midi_file, as: :file, disabled: only_show %>
     </div>
   </div>
 
+  <%- unless only_show -%>
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary" %>
   </div>
+  <%- end -%>
 <% end %>

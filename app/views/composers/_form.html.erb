@@ -1,11 +1,14 @@
+<%- only_show ||= false -%>
 <%= simple_form_for(@composer) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :name %>
+    <%= f.input :name, disabled: only_show %>
   </div>
 
+<%- unless only_show -%>
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary" %>
   </div>
+<%- end -%>
 <% end %>

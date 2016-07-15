@@ -1,10 +1,7 @@
 <h1>Show Composer</h1>
 <p id="notice"><%= notice %></p>
 
-<p class="well">
-  <strong>Name:</strong>
-  <%= @composer.name %>
-</p>
+<%= render "form", only_show: true %>
 
 <div class="text-center">
   <%= link_to 'Back', composers_path, class: "btn btn-default" %> |

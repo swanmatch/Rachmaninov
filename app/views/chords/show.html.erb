@@ -1,12 +1,7 @@
+<h1>Show Chord</h1>
 <p id="notice"><%= notice %></p>
 
-<div class="well">
-    <p>
-    <strong>Name:</strong>
-    <%= @chord.name %>
-  </p>
-
-  </div>
+<%= render "form", only_show: true %>
 
 <div class="text-center">
   <%= link_to 'Back', chords_path, class: 'btn btn-default' %> |

@@ -1,14 +1,7 @@
+<h1>Show <%= singular_table_name.titleize %></h1>
 <p id="notice"><%%= notice %></p>
 
-<div class="well">
-  <% attributes.reject(&:password_digest?).each do |attribute| -%>
-  <p>
-    <strong><%= attribute.human_name %>:</strong>
-    <%%= @<%= singular_table_name %>.<%= attribute.name %> %>
-  </p>
-
-  <% end -%>
-</div>
+<%%= render "form", only_show: true %>
 
 <div class="text-center">
   <%%= link_to 'Back', <%= index_helper %>_path, class: 'btn btn-default' %> |

@@ -6801,3 +6801,1784 @@ Processing by SongsController#index as HTML
   [1m[36mComposer Load (0.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
   Rendered songs/index.html.erb within layouts/application (7.0ms)
 Completed 200 OK in 89ms (Views: 87.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 13:26:04 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 106ms (Views: 101.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/new" for 127.0.0.1 at 2016-07-15 13:26:26 +0900
+Processing by SongsController#new as HTML
+  [1m[35mComposer Load (0.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (45.0ms)
+  Rendered songs/new.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 142ms (Views: 140.0ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead. (called from (root) at C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/config/initializers/simple_form_bootstrap.rb:3)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead. (called from (root) at C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/config/initializers/simple_form_bootstrap.rb:3)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-15 15:18:22 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (49.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 2758ms (Views: 1737.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2016-07-15 15:18:34 +0900
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (1.0ms)[0m  SELECT `songs`.* FROM `songs`
+  [1m[36mComposer Load (29.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/index.html.erb within layouts/application (375.0ms)
+Completed 200 OK in 737ms (Views: 441.0ms | ActiveRecord: 89.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 15:18:36 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (2.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  Rendered songs/_form.html.erb (5.0ms)
+  Rendered songs/edit.html.erb within layouts/application (46.0ms)
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 2.0ms)
+
+SyntaxError - C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/app/views/songs/_form.html.erb:25: syntax error, unexpected tIDENTIFIER
+      '.freeze;@output_buffer.append=( f.input :midi_file as: :file );@output_buffer.safe_append='
+                                                           ^:
+  org/jruby/RubyModule.java:2346:in `'
+  org/jruby/RubyModule.java:2346:in `module_eval'
+  actionview (4.2.6) lib/action_view/template.rb:296:in `compile'
+  actionview (4.2.6) lib/action_view/template.rb:245:in `compile!'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:244:in `compile!'
+  org/jruby/ext/thread/Mutex.java:149:in `synchronize'
+  actionview (4.2.6) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.2.6) lib/action_view/template.rb:144:in `render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:339:in `render_partial'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:310:in `render'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:309:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:51:in `render_partial'
+  actionview (4.2.6) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  app/views/songs/edit.html.erb:3:in `_app_views_songs_edit_html_erb___1997119443_7854'
+  actionview (4.2.6) lib/action_view/template.rb:145:in `render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:54:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  C:/jruby-1.7.24/lib/ruby/1.9/benchmark.rb:295:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `process_action'
+  org/jruby/RubyProc.java:281:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `compile'
+  org/jruby/RubyProc.java:281:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `action'
+  org/jruby/RubyProc.java:281:in `call'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `serve'
+  org/jruby/RubyArray.java:1613:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+
+
+
+Started POST "/__better_errors/7860/variables" for 127.0.0.1 at 2016-07-15 15:18:36 +0900
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 15:18:51 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (1.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (950.0ms)
+  Rendered songs/edit.html.erb within layouts/application (955.0ms)
+Completed 200 OK in 1084ms (Views: 1077.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 15:24:16 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (1.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (0.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (80.0ms)
+  Rendered songs/edit.html.erb within layouts/application (84.0ms)
+Completed 200 OK in 185ms (Views: 180.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 15:25:22 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (4.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (76.0ms)
+  Rendered songs/edit.html.erb within layouts/application (84.0ms)
+Completed 200 OK in 208ms (Views: 196.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 15:25:38 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (1.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (0.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (90.0ms)
+  Rendered songs/edit.html.erb within layouts/application (96.0ms)
+Completed 200 OK in 202ms (Views: 196.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 15:25:54 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (1.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (70.0ms)
+  Rendered songs/edit.html.erb within layouts/application (75.0ms)
+Completed 200 OK in 172ms (Views: 166.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 15:26:10 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (1.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (0.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (61.0ms)
+  Rendered songs/edit.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 177ms (Views: 167.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 15:26:45 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (2.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (84.0ms)
+  Rendered songs/edit.html.erb within layouts/application (91.0ms)
+Completed 200 OK in 177ms (Views: 170.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 15:36:53 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (62.0ms)
+  Rendered songs/edit.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 181ms (Views: 175.0ms | ActiveRecord: 1.0ms)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead. (called from (root) at C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/config/initializers/simple_form_bootstrap.rb:3)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead. (called from (root) at C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/config/initializers/simple_form_bootstrap.rb:3)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 15:40:47 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (483.0ms)
+  Rendered songs/edit.html.erb within layouts/application (513.0ms)
+Completed 200 OK in 2451ms (Views: 1578.0ms | ActiveRecord: 31.0ms)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead. (called from (root) at C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/config/initializers/simple_form_bootstrap.rb:3)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 15:42:43 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (368.0ms)
+  Rendered songs/edit.html.erb within layouts/application (395.0ms)
+Completed 200 OK in 2103ms (Views: 1263.0ms | ActiveRecord: 17.0ms)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead. (called from (root) at C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/config/initializers/simple_form_bootstrap.rb:3)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 15:43:32 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (366.0ms)
+  Rendered songs/edit.html.erb within layouts/application (392.0ms)
+Completed 200 OK in 2062ms (Views: 1223.0ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 16:02:00 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (77.0ms)
+  Rendered songs/edit.html.erb within layouts/application (82.0ms)
+Completed 200 OK in 190ms (Views: 184.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 16:02:09 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (92.0ms)
+  Rendered songs/edit.html.erb within layouts/application (96.0ms)
+Completed 200 OK in 216ms (Views: 209.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 16:04:18 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (78.0ms)
+  Rendered songs/edit.html.erb within layouts/application (82.0ms)
+Completed 200 OK in 200ms (Views: 194.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 16:04:33 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (5.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (64.0ms)
+  Rendered songs/edit.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 168ms (Views: 155.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 16:04:40 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (68.0ms)
+  Rendered songs/edit.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 171ms (Views: 162.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 16:05:57 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (78.0ms)
+  Rendered songs/edit.html.erb within layouts/application (86.0ms)
+Completed 200 OK in 199ms (Views: 191.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 16:06:33 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (69.0ms)
+  Rendered songs/edit.html.erb within layouts/application (76.0ms)
+Completed 200 OK in 167ms (Views: 158.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 16:07:01 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (82.0ms)
+  Rendered songs/edit.html.erb within layouts/application (87.0ms)
+Completed 200 OK in 175ms (Views: 169.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 16:07:38 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (64.0ms)
+  Rendered songs/edit.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 173ms (Views: 166.0ms | ActiveRecord: 2.0ms)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead. (called from (root) at C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/config/initializers/simple_form_bootstrap.rb:3)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 16:15:16 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (466.0ms)
+  Rendered songs/edit.html.erb within layouts/application (500.0ms)
+Completed 200 OK in 2404ms (Views: 1542.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 16:15:41 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (82.0ms)
+  Rendered songs/edit.html.erb within layouts/application (89.0ms)
+Completed 200 OK in 194ms (Views: 184.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-15 16:15:55 +0900
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 117ms (Views: 112.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2016-07-15 16:16:00 +0900
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (2.0ms)[0m  SELECT `songs`.* FROM `songs`
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/index.html.erb within layouts/application (73.0ms)
+Completed 200 OK in 159ms (Views: 154.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:16:02 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (2.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 143ms (Views: 136.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:19:46 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (3.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/show.html.erb within layouts/application (53.0ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 4.0ms)
+
+ArgumentError - ':form' is not an ActiveModel-compatible object. It must implement :to_partial_path.:
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:478:in `partial_path'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:382:in `setup'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:293:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:51:in `render_partial'
+  actionview (4.2.6) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  app/views/songs/show.html.erb:31:in `_app_views_songs_show_html_erb___766264457_7954'
+  actionview (4.2.6) lib/action_view/template.rb:145:in `render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:54:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  C:/jruby-1.7.24/lib/ruby/1.9/benchmark.rb:295:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `process_action'
+  org/jruby/RubyProc.java:281:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `compile'
+  org/jruby/RubyProc.java:281:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `action'
+  org/jruby/RubyProc.java:281:in `call'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `serve'
+  org/jruby/RubyArray.java:1613:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma-3.4.0 (java) lib/puma/configuration.rb:224:in `call'
+  puma-3.4.0 (java) lib/puma/server.rb:569:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:406:in `process_client'
+
+
+
+Started POST "/__better_errors/7962/variables" for 127.0.0.1 at 2016-07-15 16:19:47 +0900
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:20:18 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (3.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (418.0ms)
+  Rendered songs/show.html.erb within layouts/application (435.0ms)
+Completed 500 Internal Server Error in 450ms (ActiveRecord: 5.0ms)
+
+NameError - undefined local variable or method `show' for #<#<Class:0xc3ce65>:0xa0fa74>:
+  app/views/songs/_form.html.erb:33:in `_app_views_songs__form_html_erb__300315928_8754'
+  actionview (4.2.6) lib/action_view/template.rb:145:in `render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:339:in `render_partial'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:310:in `render'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:309:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:51:in `render_partial'
+  actionview (4.2.6) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  app/views/songs/show.html.erb:31:in `_app_views_songs_show_html_erb___766264457_8744'
+  actionview (4.2.6) lib/action_view/template.rb:145:in `render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:54:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  C:/jruby-1.7.24/lib/ruby/1.9/benchmark.rb:295:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `process_action'
+  org/jruby/RubyProc.java:281:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `compile'
+  org/jruby/RubyProc.java:281:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `action'
+  org/jruby/RubyProc.java:281:in `call'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `serve'
+  org/jruby/RubyArray.java:1613:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma-3.4.0 (java) lib/puma/configuration.rb:224:in `call'
+
+
+
+Started POST "/__better_errors/8764/variables" for 127.0.0.1 at 2016-07-15 16:20:19 +0900
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:20:59 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (2.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (0.0ms)[0m  SELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1
+  Rendered songs/show.html.erb within layouts/application (311.0ms)
+Completed 500 Internal Server Error in 323ms (ActiveRecord: 2.0ms)
+
+NameError - undefined local variable or method `locals' for #<#<Class:0xc3ce65>:0x17fcfbd>:
+  app/views/songs/show.html.erb:31:in `_app_views_songs_show_html_erb___766264457_9354'
+  actionview (4.2.6) lib/action_view/template.rb:145:in `render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:54:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  C:/jruby-1.7.24/lib/ruby/1.9/benchmark.rb:295:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `process_action'
+  org/jruby/RubyProc.java:281:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `compile'
+  org/jruby/RubyProc.java:281:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `action'
+  org/jruby/RubyProc.java:281:in `call'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `serve'
+  org/jruby/RubyArray.java:1613:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma-3.4.0 (java) lib/puma/configuration.rb:224:in `call'
+  puma-3.4.0 (java) lib/puma/server.rb:569:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:406:in `process_client'
+  puma-3.4.0 (java) lib/puma/server.rb:271:in `run'
+  org/jruby/RubyProc.java:281:in `call'
+  puma-3.4.0 (java) lib/puma/thread_pool.rb:114:in `spawn_thread'
+
+
+
+Started POST "/__better_errors/9366/variables" for 127.0.0.1 at 2016-07-15 16:20:59 +0900
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:21:52 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (1.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (2.0ms)[0m  SELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (83.0ms)
+  Rendered songs/show.html.erb within layouts/application (99.0ms)
+Completed 200 OK in 205ms (Views: 196.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:22:39 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (64.0ms)
+  Rendered songs/show.html.erb within layouts/application (77.0ms)
+Completed 200 OK in 166ms (Views: 157.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:23:15 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (1.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (61.0ms)
+  Rendered songs/show.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 194ms (Views: 188.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:23:23 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (2.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (0.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (90.0ms)
+  Rendered songs/show.html.erb within layouts/application (105.0ms)
+Completed 200 OK in 235ms (Views: 223.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:23:24 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (1.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (84.0ms)
+  Rendered songs/show.html.erb within layouts/application (97.0ms)
+Completed 200 OK in 197ms (Views: 190.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:23:50 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (86.0ms)
+  Rendered songs/show.html.erb within layouts/application (97.0ms)
+Completed 200 OK in 194ms (Views: 187.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:23:58 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (1.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (61.0ms)
+  Rendered songs/show.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 167ms (Views: 161.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:24:55 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (60.0ms)
+  Rendered songs/show.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 173ms (Views: 167.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:25:04 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (1.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (4.0ms)[0m  SELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (57.0ms)
+  Rendered songs/show.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 167ms (Views: 157.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:26:02 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (2.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (61.0ms)
+  Rendered songs/show.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 167ms (Views: 159.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:26:12 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (1.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (57.0ms)
+  Rendered songs/show.html.erb within layouts/application (77.0ms)
+Completed 200 OK in 179ms (Views: 172.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:26:23 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (66.0ms)
+  Rendered songs/show.html.erb within layouts/application (102.0ms)
+Completed 200 OK in 192ms (Views: 180.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:26:44 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (2.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1
+  Rendered songs/_form.html.erb (5.0ms)
+  Rendered songs/show.html.erb within layouts/application (17.0ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 3.0ms)
+
+SyntaxError - C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/app/views/songs/_form.html.erb:1: syntax error, unexpected '='
+            _old_virtual_path, @virtual_path = @virtual_path, "songs/_form";_old_output_buffer = @output_buffer;only_show? = only_show? = local_assigns[:only_show?];;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  simple_form_for(@song) do |f| @output_buffer.safe_append='
+                                                                                                                           ^:
+  org/jruby/RubyModule.java:2346:in `'
+  org/jruby/RubyModule.java:2346:in `module_eval'
+  actionview (4.2.6) lib/action_view/template.rb:296:in `compile'
+  actionview (4.2.6) lib/action_view/template.rb:245:in `compile!'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:244:in `compile!'
+  org/jruby/ext/thread/Mutex.java:149:in `synchronize'
+  actionview (4.2.6) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.2.6) lib/action_view/template.rb:144:in `render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:339:in `render_partial'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:310:in `render'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:309:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:51:in `render_partial'
+  actionview (4.2.6) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  app/views/songs/show.html.erb:31:in `_app_views_songs_show_html_erb___766264457_10628'
+  actionview (4.2.6) lib/action_view/template.rb:145:in `render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:54:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  C:/jruby-1.7.24/lib/ruby/1.9/benchmark.rb:295:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `process_action'
+  org/jruby/RubyProc.java:281:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `compile'
+  org/jruby/RubyProc.java:281:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `action'
+  org/jruby/RubyProc.java:281:in `call'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `serve'
+  org/jruby/RubyArray.java:1613:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+
+
+
+Started POST "/__better_errors/10640/variables" for 127.0.0.1 at 2016-07-15 16:26:45 +0900
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:26:57 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (1.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (400.0ms)
+  Rendered songs/show.html.erb within layouts/application (410.0ms)
+Completed 500 Internal Server Error in 426ms (ActiveRecord: 3.0ms)
+
+NameError - undefined local variable or method `show' for #<#<Class:0xc3ce65>:0x843726>:
+  app/views/songs/_form.html.erb:33:in `_app_views_songs__form_html_erb__300315928_11412'
+  actionview (4.2.6) lib/action_view/template.rb:145:in `render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:339:in `render_partial'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:310:in `render'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:309:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:51:in `render_partial'
+  actionview (4.2.6) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  app/views/songs/show.html.erb:31:in `_app_views_songs_show_html_erb___766264457_11402'
+  actionview (4.2.6) lib/action_view/template.rb:145:in `render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:54:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  C:/jruby-1.7.24/lib/ruby/1.9/benchmark.rb:295:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `process_action'
+  org/jruby/RubyProc.java:281:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `compile'
+  org/jruby/RubyProc.java:281:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `action'
+  org/jruby/RubyProc.java:281:in `call'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `serve'
+  org/jruby/RubyArray.java:1613:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:22:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma-3.4.0 (java) lib/puma/configuration.rb:224:in `call'
+  puma-3.4.0 (java) lib/puma/server.rb:569:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:567:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:406:in `process_client'
+  puma-3.4.0 (java) lib/puma/server.rb:271:in `run'
+  org/jruby/RubyProc.java:281:in `call'
+  puma-3.4.0 (java) lib/puma/thread_pool.rb:114:in `spawn_thread'
+
+
+
+Started POST "/__better_errors/11420/variables" for 127.0.0.1 at 2016-07-15 16:26:58 +0900
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:27:05 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (73.0ms)
+  Rendered songs/show.html.erb within layouts/application (81.0ms)
+Completed 200 OK in 164ms (Views: 155.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:27:41 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (1.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1
+  Rendered songs/_form.html.erb (323.0ms)
+  Rendered songs/show.html.erb within layouts/application (332.0ms)
+Completed 500 Internal Server Error in 348ms (ActiveRecord: 2.0ms)
+
+NoMethodError - undefined method `only' for #<#<Class:0xc3ce65>:0x2e5098>:
+  app/views/songs/_form.html.erb:1:in `_app_views_songs__form_html_erb__300315928_12058'
+  actionview (4.2.6) lib/action_view/template.rb:145:in `render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:339:in `render_partial'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:310:in `render'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:309:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:51:in `render_partial'
+  actionview (4.2.6) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  app/views/songs/show.html.erb:31:in `_app_views_songs_show_html_erb___766264457_11402'
+  actionview (4.2.6) lib/action_view/template.rb:145:in `render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:54:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  C:/jruby-1.7.24/lib/ruby/1.9/benchmark.rb:295:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `process_action'
+  org/jruby/RubyProc.java:281:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `compile'
+  org/jruby/RubyProc.java:281:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `action'
+  org/jruby/RubyProc.java:281:in `call'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `serve'
+  org/jruby/RubyArray.java:1613:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:22:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma-3.4.0 (java) lib/puma/configuration.rb:224:in `call'
+  puma-3.4.0 (java) lib/puma/server.rb:569:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:567:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:406:in `process_client'
+  puma-3.4.0 (java) lib/puma/server.rb:271:in `run'
+  org/jruby/RubyProc.java:281:in `call'
+  puma-3.4.0 (java) lib/puma/thread_pool.rb:114:in `spawn_thread'
+
+
+
+Started POST "/__better_errors/12064/variables" for 127.0.0.1 at 2016-07-15 16:27:41 +0900
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:27:45 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (1.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (63.0ms)
+  Rendered songs/show.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 161ms (Views: 153.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:28:07 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (57.0ms)
+  Rendered songs/show.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 168ms (Views: 160.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:28:47 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.0ms)[0m  [1mSELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1[0m
+  [1m[35mComposer Load (2.0ms)[0m  SELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (60.0ms)
+  Rendered songs/show.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 178ms (Views: 168.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:29:06 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (54.0ms)
+  Rendered songs/show.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 149ms (Views: 144.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 16:29:48 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (61.0ms)
+  Rendered songs/edit.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 170ms (Views: 150.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 16:29:57 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (65.0ms)
+  Rendered songs/show.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 155ms (Views: 151.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 16:33:04 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (54.0ms)
+  Rendered songs/edit.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 160ms (Views: 156.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2016-07-15 16:33:22 +0900
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (1.0ms)[0m  SELECT `songs`.* FROM `songs`
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 128ms (Views: 124.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 16:33:24 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (78.0ms)
+  Rendered songs/edit.html.erb within layouts/application (87.0ms)
+Completed 200 OK in 171ms (Views: 166.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2016-07-15 16:33:25 +0900
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (1.0ms)[0m  SELECT `songs`.* FROM `songs`
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 121ms (Views: 117.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/new" for 127.0.0.1 at 2016-07-15 16:33:27 +0900
+Processing by SongsController#new as HTML
+  [1m[35mComposer Load (0.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered songs/_form.html.erb (87.0ms)
+  Rendered songs/new.html.erb within layouts/application (94.0ms)
+Completed 200 OK in 173ms (Views: 168.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2016-07-15 16:34:11 +0900
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (1.0ms)[0m  [1mSELECT `songs`.* FROM `songs`[0m
+  [1m[35mComposer Load (1.0ms)[0m  SELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1
+  Rendered songs/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 95ms (Views: 90.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/composers" for 127.0.0.1 at 2016-07-15 16:34:33 +0900
+Processing by ComposersController#index as HTML
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered composers/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 139ms (Views: 133.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers" for 127.0.0.1 at 2016-07-15 16:34:36 +0900
+Processing by ComposersController#index as HTML
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered composers/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 86ms (Views: 80.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/composers" for 127.0.0.1 at 2016-07-15 16:34:37 +0900
+Processing by ComposersController#index as HTML
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered composers/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 87ms (Views: 85.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers" for 127.0.0.1 at 2016-07-15 16:34:39 +0900
+Processing by ComposersController#index as HTML
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered composers/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 91ms (Views: 75.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/chords" for 127.0.0.1 at 2016-07-15 16:34:46 +0900
+Processing by ChordsController#index as HTML
+  [1m[36mChord Load (1.0ms)[0m  [1mSELECT `chords`.* FROM `chords`[0m
+  Rendered chords/index.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 129ms (Views: 111.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/chords/2/edit" for 127.0.0.1 at 2016-07-15 16:34:49 +0900
+Processing by ChordsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChord Load (1.0ms)[0m  SELECT  `chords`.* FROM `chords` WHERE `chords`.`id` = 2 LIMIT 1
+  Rendered chords/_form.html.erb (16.0ms)
+  Rendered chords/edit.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 130ms (Views: 119.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/chords" for 127.0.0.1 at 2016-07-15 16:34:52 +0900
+Processing by ChordsController#index as HTML
+  [1m[36mChord Load (0.0ms)[0m  [1mSELECT `chords`.* FROM `chords`[0m
+  Rendered chords/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 87ms (Views: 85.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chords/1" for 127.0.0.1 at 2016-07-15 16:35:06 +0900
+Processing by ChordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChord Load (0.0ms)[0m  SELECT  `chords`.* FROM `chords` WHERE `chords`.`id` = 1 LIMIT 1
+  Rendered chords/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 117ms (Views: 112.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chords/1" for 127.0.0.1 at 2016-07-15 16:40:13 +0900
+Processing by ChordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChord Load (1.0ms)[0m  [1mSELECT  `chords`.* FROM `chords` WHERE `chords`.`id` = 1 LIMIT 1[0m
+  Rendered chords/_form.html.erb (13.0ms)
+  Rendered chords/show.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 105ms (Views: 101.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/chords" for 127.0.0.1 at 2016-07-15 16:45:01 +0900
+Processing by ChordsController#index as HTML
+  [1m[35mChord Load (1.0ms)[0m  SELECT `chords`.* FROM `chords`
+  Rendered chords/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 98ms (Views: 94.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/chords/1" for 127.0.0.1 at 2016-07-15 16:45:03 +0900
+Processing by ChordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChord Load (1.0ms)[0m  [1mSELECT  `chords`.* FROM `chords` WHERE `chords`.`id` = 1 LIMIT 1[0m
+  Rendered chords/_form.html.erb (14.0ms)
+  Rendered chords/show.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 113ms (Views: 108.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/chords/1/edit" for 127.0.0.1 at 2016-07-15 16:45:05 +0900
+Processing by ChordsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChord Load (1.0ms)[0m  SELECT  `chords`.* FROM `chords` WHERE `chords`.`id` = 1 LIMIT 1
+  Rendered chords/_form.html.erb (346.0ms)
+  Rendered chords/edit.html.erb within layouts/application (352.0ms)
+Completed 500 Internal Server Error in 367ms (ActiveRecord: 1.0ms)
+
+NameError - undefined local variable or method `only_show' for #<#<Class:0x1be0187>:0x156751f>:
+  app/views/chords/_form.html.erb:5:in `_app_views_chords__form_html_erb___102228075_13316'
+  actionview (4.2.6) lib/action_view/helpers/capture_helper.rb:38:in `capture'
+  actionview (4.2.6) lib/action_view/helpers/capture_helper.rb:202:in `with_output_buffer'
+  actionview (4.2.6) lib/action_view/helpers/capture_helper.rb:38:in `capture'
+  actionview (4.2.6) lib/action_view/helpers/form_helper.rb:444:in `form_for'
+  simple_form (3.2.1) lib/simple_form/action_view_extensions/form_helper.rb:26:in `simple_form_for'
+  simple_form (3.2.1) lib/simple_form/action_view_extensions/form_helper.rb:45:in `with_simple_form_field_error_proc'
+  simple_form (3.2.1) lib/simple_form/action_view_extensions/form_helper.rb:25:in `simple_form_for'
+  app/views/chords/_form.html.erb:1:in `_app_views_chords__form_html_erb___102228075_13316'
+  actionview (4.2.6) lib/action_view/template.rb:145:in `render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:339:in `render_partial'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:310:in `render'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/partial_renderer.rb:309:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:51:in `render_partial'
+  actionview (4.2.6) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  app/views/chords/edit.html.erb:3:in `_app_views_chords_edit_html_erb___1472938769_13160'
+  actionview (4.2.6) lib/action_view/template.rb:145:in `render'
+  activesupport (4.2.6) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.6) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:54:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:53:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  C:/jruby-1.7.24/lib/ruby/1.9/benchmark.rb:295:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `process_action'
+  org/jruby/RubyProc.java:281:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `compile'
+  org/jruby/RubyProc.java:281:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:19:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `action'
+  org/jruby/RubyProc.java:281:in `call'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `serve'
+  org/jruby/RubyArray.java:1613:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:22:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma-3.4.0 (java) lib/puma/configuration.rb:224:in `call'
+  puma-3.4.0 (java) lib/puma/server.rb:569:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:567:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:406:in `process_client'
+  puma-3.4.0 (java) lib/puma/server.rb:401:in `process_client'
+  puma-3.4.0 (java) lib/puma/server.rb:271:in `run'
+  org/jruby/RubyProc.java:281:in `call'
+  puma-3.4.0 (java) lib/puma/thread_pool.rb:114:in `spawn_thread'
+
+
+
+Started POST "/__better_errors/13320/variables" for 127.0.0.1 at 2016-07-15 16:45:06 +0900
+
+
+Started GET "/chords/1/edit" for 127.0.0.1 at 2016-07-15 16:45:21 +0900
+Processing by ChordsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChord Load (1.0ms)[0m  [1mSELECT  `chords`.* FROM `chords` WHERE `chords`.`id` = 1 LIMIT 1[0m
+  Rendered chords/_form.html.erb (23.0ms)
+  Rendered chords/edit.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 106ms (Views: 101.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/chords" for 127.0.0.1 at 2016-07-15 16:45:26 +0900
+Processing by ChordsController#index as HTML
+  [1m[35mChord Load (0.0ms)[0m  SELECT `chords`.* FROM `chords`
+  Rendered chords/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 598ms (Views: 595.0ms | ActiveRecord: 0.0ms)
