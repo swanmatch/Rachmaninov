@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160711074251) do
+ActiveRecord::Schema.define(version: 20160714071340) do
 
   create_table "chords", force: :cascade do |t|
     t.string   "name",         limit: 255
@@ -45,6 +45,25 @@ ActiveRecord::Schema.define(version: 20160711074251) do
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
   end
+
+  create_table "k_files", force: :cascade do |t|
+    t.string   "parent_type",   limit: 255
+    t.integer  "parent_id",     limit: 4
+    t.integer  "order",         limit: 4
+    t.string   "original_name", limit: 255
+    t.string   "content_type",  limit: 255
+    t.text     "text",          limit: 65535
+    t.integer  "lock_version",  limit: 4,     default: 0, null: false
+    t.integer  "created_by",    limit: 4
+    t.integer  "updated_by",    limit: 4
+    t.integer  "deleted_by",    limit: 4
+    t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "k_files", ["parent_id"], name: "index_k_files_on_parent_id", using: :btree
+  add_index "k_files", ["parent_type"], name: "index_k_files_on_parent_type", using: :btree
 
   create_table "songs", force: :cascade do |t|
     t.string   "title",        limit: 255

@@ -6214,3 +6214,590 @@ Started GET "/" for 127.0.0.1 at 2016-07-12 12:02:21 +0900
 Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (87.0ms)
 Completed 200 OK in 1620ms (Views: 1458.0ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead. (called from (root) at C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/config/initializers/simple_form_bootstrap.rb:3)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead. (called from (root) at C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/config/initializers/simple_form_bootstrap.rb:3)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead. (called from (root) at C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/config/initializers/simple_form_bootstrap.rb:3)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-15 11:24:45 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (52.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+ActiveRecord::PendingMigrationError - 
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+:
+  activerecord (4.2.6) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.6) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:782:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma-3.4.0 (java) lib/puma/configuration.rb:224:in `call'
+  puma-3.4.0 (java) lib/puma/server.rb:569:in `handle_request'
+  puma-3.4.0 (java) lib/puma/server.rb:406:in `process_client'
+  puma-3.4.0 (java) lib/puma/server.rb:271:in `run'
+  org/jruby/RubyProc.java:281:in `call'
+  puma-3.4.0 (java) lib/puma/thread_pool.rb:114:in `spawn_thread'
+
+
+
+Started POST "/__better_errors/7600/variables" for 127.0.0.1 at 2016-07-15 11:24:46 +0900
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead. (called from (root) at C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/config/initializers/simple_form_bootstrap.rb:3)
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateKFiles (20160714071340)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from change at C:/Users/takuma/Documents/NetBeansProjects/Rachmaninov/db/migrate/20160714071340_create_k_files.rb:37)
+  [1m[35m (107.0ms)[0m  CREATE TABLE `k_files` (`id` int(11) auto_increment PRIMARY KEY, `parent_type` varchar(255), `parent_id` int(11), `order` int(11), `original_name` varchar(255), `content_type` varchar(255), `text` text, `lock_version` int(11) DEFAULT 0 NOT NULL, `created_by` int(11), `updated_by` int(11), `deleted_by` int(11), `deleted_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (128.0ms)[0m  [1mCREATE  INDEX `index_k_files_on_parent_type` ON `k_files` (`parent_type`)[0m
+  [1m[35m (85.0ms)[0m  CREATE  INDEX `index_k_files_on_parent_id` ON `k_files` (`parent_id`)
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20160714071340')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (13.0ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (1.0ms)[0m  SELECT fk.referenced_table_name as 'to_table' ,fk.referenced_column_name as 'primary_key' ,fk.column_name as 'column' ,fk.constraint_name as 'name' FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name is not null AND fk.table_schema = 'rachmaninov_development' AND fk.table_name = 'chords'
+  [1m[36m (0.0ms)[0m  [1mSHOW CREATE TABLE `chords`[0m
+  [1m[35m (0.0ms)[0m  SELECT DATABASE() as db
+  [1m[36m (1.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table' ,fk.referenced_column_name as 'primary_key' ,fk.column_name as 'column' ,fk.constraint_name as 'name' FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name is not null AND fk.table_schema = 'rachmaninov_development' AND fk.table_name = 'codes'[0m
+  [1m[35m (1.0ms)[0m  SHOW CREATE TABLE `codes`
+  [1m[36m (1.0ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (2.0ms)[0m  SELECT fk.referenced_table_name as 'to_table' ,fk.referenced_column_name as 'primary_key' ,fk.column_name as 'column' ,fk.constraint_name as 'name' FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name is not null AND fk.table_schema = 'rachmaninov_development' AND fk.table_name = 'composers'
+  [1m[36m (1.0ms)[0m  [1mSHOW CREATE TABLE `composers`[0m
+  [1m[35m (1.0ms)[0m  SELECT DATABASE() as db
+  [1m[36m (1.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table' ,fk.referenced_column_name as 'primary_key' ,fk.column_name as 'column' ,fk.constraint_name as 'name' FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name is not null AND fk.table_schema = 'rachmaninov_development' AND fk.table_name = 'k_files'[0m
+  [1m[35m (0.0ms)[0m  SHOW CREATE TABLE `k_files`
+  [1m[36m (1.0ms)[0m  [1mSELECT DATABASE() as db[0m
+  [1m[35m (1.0ms)[0m  SELECT fk.referenced_table_name as 'to_table' ,fk.referenced_column_name as 'primary_key' ,fk.column_name as 'column' ,fk.constraint_name as 'name' FROM information_schema.key_column_usage fk WHERE fk.referenced_column_name is not null AND fk.table_schema = 'rachmaninov_development' AND fk.table_name = 'songs'
+  [1m[36m (11.0ms)[0m  [1mSHOW CREATE TABLE `songs`[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-15 11:25:20 +0900
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 1955ms (Views: 1900.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers" for 127.0.0.1 at 2016-07-15 11:25:28 +0900
+Processing by ComposersController#index as HTML
+  [1m[36mComposer Load (2.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered composers/index.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 174ms (Views: 149.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2016-07-15 11:25:30 +0900
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (1.0ms)[0m  SELECT `songs`.* FROM `songs`
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/index.html.erb within layouts/application (185.0ms)
+Completed 200 OK in 373ms (Views: 297.0ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/songs/1" for 127.0.0.1 at 2016-07-15 11:25:32 +0900
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (2.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/show.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 178ms (Views: 113.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2016-07-15 11:25:34 +0900
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (1.0ms)[0m  SELECT `songs`.* FROM `songs`
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 134ms (Views: 130.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:25:35 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (736.0ms)
+  Rendered songs/edit.html.erb within layouts/application (784.0ms)
+Completed 200 OK in 904ms (Views: 890.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:27:16 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (2.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (69.0ms)
+  Rendered songs/edit.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 6999ms (Views: 6991.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:27:38 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (80.0ms)
+  Rendered songs/edit.html.erb within layouts/application (87.0ms)
+Completed 200 OK in 3037ms (Views: 3030.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:27:58 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (57.0ms)
+  Rendered songs/edit.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 3249ms (Views: 3243.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:28:50 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (63.0ms)
+  Rendered songs/edit.html.erb within layouts/application (68.0ms)
+Completed 200 OK in 157ms (Views: 145.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:28:55 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (2.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (70.0ms)
+  Rendered songs/edit.html.erb within layouts/application (77.0ms)
+Completed 200 OK in 187ms (Views: 181.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:28:58 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (53.0ms)
+  Rendered songs/edit.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 163ms (Views: 159.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:30:43 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (64.0ms)
+  Rendered songs/edit.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 2828ms (Views: 2822.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:31:21 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (3.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (65.0ms)
+  Rendered songs/edit.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 3268ms (Views: 3260.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:32:33 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (57.0ms)
+  Rendered songs/edit.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 180ms (Views: 166.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:33:00 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (83.0ms)
+  Rendered songs/edit.html.erb within layouts/application (88.0ms)
+Completed 200 OK in 2707ms (Views: 2703.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:33:32 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (65.0ms)
+  Rendered songs/edit.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 2687ms (Views: 2683.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:33:49 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (59.0ms)
+  Rendered songs/edit.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 164ms (Views: 157.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:33:49 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (48.0ms)
+  Rendered songs/edit.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 145ms (Views: 140.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:34:35 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (61.0ms)
+  Rendered songs/edit.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 152ms (Views: 147.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:35:05 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (54.0ms)
+  Rendered songs/edit.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 137ms (Views: 131.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:36:18 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (63.0ms)
+  Rendered songs/edit.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 158ms (Views: 151.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:37:11 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (68.0ms)
+  Rendered songs/edit.html.erb within layouts/application (73.0ms)
+Completed 200 OK in 2674ms (Views: 2671.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:37:46 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (53.0ms)
+  Rendered songs/edit.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 2639ms (Views: 2631.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:37:58 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (3.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (46.0ms)
+  Rendered songs/edit.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 2665ms (Views: 2655.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:39:04 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (72.0ms)
+  Rendered songs/edit.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 191ms (Views: 182.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:39:59 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (50.0ms)
+  Rendered songs/edit.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 3086ms (Views: 3081.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:41:47 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (45.0ms)
+  Rendered songs/edit.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 143ms (Views: 140.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:42:04 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (48.0ms)
+  Rendered songs/edit.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 142ms (Views: 138.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:43:33 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (65.0ms)
+  Rendered songs/edit.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 153ms (Views: 147.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:44:41 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (84.0ms)
+  Rendered songs/edit.html.erb within layouts/application (89.0ms)
+Completed 200 OK in 170ms (Views: 165.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:45:18 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (46.0ms)
+  Rendered songs/edit.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 135ms (Views: 130.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:45:45 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (47.0ms)
+  Rendered songs/edit.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 134ms (Views: 130.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:53:44 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (0.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (51.0ms)
+  Rendered songs/edit.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 158ms (Views: 152.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:54:00 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (47.0ms)
+  Rendered songs/edit.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 135ms (Views: 132.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 11:55:52 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (45.0ms)
+  Rendered songs/edit.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 144ms (Views: 140.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 12:03:29 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (50.0ms)
+  Rendered songs/edit.html.erb within layouts/application (54.0ms)
+Completed 200 OK in 141ms (Views: 137.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 12:04:39 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (45.0ms)
+  Rendered songs/edit.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 139ms (Views: 133.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 12:09:09 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (65.0ms)
+  Rendered songs/edit.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 171ms (Views: 165.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 12:09:18 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (45.0ms)
+  Rendered songs/edit.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 132ms (Views: 126.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 12:13:06 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (49.0ms)
+  Rendered songs/edit.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 2849ms (Views: 2844.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2016-07-15 13:00:02 +0900
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (1.0ms)[0m  SELECT `songs`.* FROM `songs`
+  [1m[36mComposer Load (2.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 120ms (Views: 114.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2016-07-15 13:00:53 +0900
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (1.0ms)[0m  SELECT `songs`.* FROM `songs`
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 84ms (Views: 79.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2016-07-15 13:01:22 +0900
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (1.0ms)[0m  SELECT `songs`.* FROM `songs`
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 101ms (Views: 97.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2016-07-15 13:05:53 +0900
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (1.0ms)[0m  SELECT `songs`.* FROM `songs`
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 103ms (Views: 99.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2016-07-15 13:06:19 +0900
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.0ms)[0m  SELECT `songs`.* FROM `songs`
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 87ms (Views: 85.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2016-07-15 13:08:01 +0900
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (1.0ms)[0m  SELECT `songs`.* FROM `songs`
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 2805ms (Views: 2801.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/songs/1/edit" for 127.0.0.1 at 2016-07-15 13:08:09 +0900
+Processing by SongsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSong Load (1.0ms)[0m  SELECT  `songs`.* FROM `songs` WHERE `songs`.`id` = 1 LIMIT 1
+  [1m[36mComposer Load (2.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered songs/_form.html.erb (89.0ms)
+  Rendered songs/edit.html.erb within layouts/application (96.0ms)
+Completed 200 OK in 183ms (Views: 177.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-07-15 13:08:58 +0900
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 82ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers" for 127.0.0.1 at 2016-07-15 13:09:00 +0900
+Processing by ComposersController#index as HTML
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered composers/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 113ms (Views: 108.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/composers/1" for 127.0.0.1 at 2016-07-15 13:09:02 +0900
+Processing by ComposersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered composers/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 181ms (Views: 140.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers" for 127.0.0.1 at 2016-07-15 13:09:03 +0900
+Processing by ComposersController#index as HTML
+  [1m[35mComposer Load (1.0ms)[0m  SELECT `composers`.* FROM `composers`
+  Rendered composers/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 107ms (Views: 91.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/composers/new" for 127.0.0.1 at 2016-07-15 13:09:05 +0900
+Processing by ComposersController#new as HTML
+  Rendered composers/_form.html.erb (18.0ms)
+  Rendered composers/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 108ms (Views: 104.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/composers" for 127.0.0.1 at 2016-07-15 13:09:07 +0900
+Processing by ComposersController#index as HTML
+  [1m[36mComposer Load (1.0ms)[0m  [1mSELECT `composers`.* FROM `composers`[0m
+  Rendered composers/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 97ms (Views: 91.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs" for 127.0.0.1 at 2016-07-15 13:09:10 +0900
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (1.0ms)[0m  SELECT `songs`.* FROM `songs`
+  [1m[36mComposer Load (0.0ms)[0m  [1mSELECT  `composers`.* FROM `composers` WHERE `composers`.`id` = 1 LIMIT 1[0m
+  Rendered songs/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 89ms (Views: 87.0ms | ActiveRecord: 1.0ms)
